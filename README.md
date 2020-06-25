@@ -4,7 +4,7 @@
 </h1>
 
 <h2 align="center">
-  <a href="https://github.com/DicoMonteiro/launchbase_fae02/src/pages">HTML</a> + <a href="https://github.com/DicoMonteiro/launchbase_fae02/public">CSS</a> + <a href="https://github.com/DicoMonteiro/launchbase_fae02/src/scripts">Javascript</a>
+  <a href="https://github.com/DicoMonteiro/foodfy/src/views">HTML</a> + <a href="https://github.com/DicoMonteiro/foodfy/public">CSS</a> + <a href="https://github.com/DicoMonteiro/foodfy/public/scripts">Javascript</a>
 </h2>
 
 <h4 align="center">
@@ -19,7 +19,7 @@
 
 ## Desafio Foodfy - Primeira Etapa
 <h2 align="center">
-  <img alt="Launchbase - Fase 02 - Front-end" src="./desafio-03.gif" />
+  <img alt="Launchbase - Foodfy - Front-end" src="./foodfy-first-step.gif" />
 </h2>
 
 ## :rocket: Technologies
@@ -37,7 +37,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and in
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/DicoMonteiro/launchbase_fae02
+$ git clone https://github.com/DicoMonteiro/foodfy
 
 # Go into the repository about HTML
 $ cd src/views
@@ -54,7 +54,7 @@ execute opened the files HTML in your browser
 ```
 
 ## :memo: License
-This project is under the MIT license. See the [LICENSE](https://github.com/DicoMonteiro/launchbase_fae02/LICENSE) for more information.
+This project is under the MIT license. See the [LICENSE](https://github.com/DicoMonteiro/foodfy/LICENSE) for more information.
 
 ---
 
