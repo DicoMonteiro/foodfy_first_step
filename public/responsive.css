@@ -1,0 +1,82 @@
+/* Responsive */
+/* Inserir regras para ao atingir um determinado ponto, ele tratar para a responsividade */
+@media (max-width: 900px) {
+    header {
+        margin: 0 370px;
+
+        margin-top: 36px;
+        margin-bottom: 30px;
+    }
+
+    .must-accessed h3 {
+        margin: 0 370px;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        width: 1700px;
+    }
+
+    .about {
+        margin: 0 370px;
+    }
+}
+
+@media (min-width: 1700px) {
+    header {
+        margin: 0 470px;
+        margin-top: 36px;
+        margin-bottom: 30px;
+    }
+
+    .must-accessed h3 {
+        margin: 0 485px;
+        margin-bottom: 20px;
+    }
+
+    .recipes {
+        margin: 0 485px 0 485px;
+    }
+
+    footer {
+        width: 1903px;
+    }
+
+    .about {
+        margin: 0 470px;
+    }
+
+    .modal {
+        margin: 313px 660px 400px 660px;
+    }
+}
+
+@media (max-height: 760px) {
+    header {
+        margin: 0 275px;
+
+        margin-top: 36px;
+        margin-bottom: 30px;
+    }
+
+    .must-accessed h3 {
+        margin: 0 292px;
+        margin-bottom: 20px;
+    }
+
+    .recipes {
+        margin: 0 292px 0 292px;
+    }
+
+    footer {
+        width: 1519px;
+    }
+
+    .about {
+        margin: 0 275px;
+    }
+
+    .modal {
+        margin: 200px 430px 200px 430px;
+    }
+}

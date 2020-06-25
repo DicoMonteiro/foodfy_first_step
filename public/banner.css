@@ -1,0 +1,126 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap";
+
+.banner {
+    width: 940px;
+    height: 366px;
+
+    background-color: #FBDFDB;
+    border-radius: 30px;
+
+    margin: 0 auto;
+    margin-bottom: 50px;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.banner::after {
+    content: '';
+
+    width: 150%;
+    height: 360%;
+
+    border-radius: 45%;
+
+    left: -25%;
+    bottom: -100%;
+
+    background: #fff;
+
+    position: absolute;
+
+    animation: spinUp 6s forwards;
+}
+
+/* Animanção no banner */
+@keyframes spinUp {
+    from {
+        transform: translateY(0) translateX(0) rotate(0);
+    }
+
+    to {
+        transform: translateY(-100%) translateX(120%) rotate(500deg);
+    }
+}
+
+@keyframes slideLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    25%{
+        transform: translateX(20%);
+    }
+    50%{
+        opacity: 1;
+        transform: translateX(-3%);
+    }
+    75%{
+        transform: translateX(2%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideRight {
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    25%{
+        transform: translateX(-20%);
+    }
+    50%{
+        opacity: 1;
+        transform: translateX(3%);
+    }
+    75%{
+        transform: translateX(-2%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.banner-text {
+    justify-self: center;
+    align-self: center;
+
+    padding-left: 60px; 
+
+    z-index: 100;
+
+    animation: slideLeft 1.5s ease-out forwards;
+}
+
+.banner-text h2 {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 42px;
+    margin-bottom: 10px;
+}
+
+.banner-text p {
+    width: 316px;
+    height: 84px;
+
+    opacity: 70%;
+
+    font-size: 18px;
+    line-height: 28px;
+    color: #000000;
+}
+
+.banner-image {
+    justify-self: center;
+    align-self: end;
+
+    z-index: 100;
+
+    animation: slideRight 1.5s ease-out forwards;
+}
