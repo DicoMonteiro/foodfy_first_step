@@ -16,12 +16,19 @@
 
 html {
     font-family: 'Roboto', sans-serif;
+    /* Teste */
+    height: 100%;
 }
 
 
 body {
-    background: white;
-    color: black;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-container {
+    flex: 1 0 auto;
 }
 
 header {
@@ -33,7 +40,7 @@ header {
     margin-bottom: 2.7%;
 }
 
-header img {
+header .logo {
 
     padding-right: 122.4px;
 
@@ -118,14 +125,16 @@ a:hover {
 }
 
 
-footer {
+.footer {
     background: #EEEEEE;
     margin-top: 4.5%;
     width: 1903px;
     height: 62px;
+
+    flex-shrink: 0;
 }
 
-footer p {
+.footer p {
     padding-top: 23px;
     padding-bottom: 23px;
     line-height: 16px;
@@ -145,6 +154,7 @@ footer p {
 }
 
 .titulo h3 {
+    margin-top: 15px;
     margin-left: 15px;
     opacity: 100%;
     font-size: 24px;
@@ -181,7 +191,7 @@ footer p {
 }
 
 .recipes.foods {
-    margin-top: 50px;
+    margin-top: 25px;
 }
 
 
