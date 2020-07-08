@@ -1,0 +1,22 @@
+{
+  "name": "Foodfy",
+  "version": "1.0.0",
+  "description": "Sistema de Receitas Culinárias",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DicoMonteiro/foodfy.git"
+  },
+  "author": "Adriano Almeida",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

@@ -16,29 +16,14 @@
 
 html {
     font-family: 'Roboto', sans-serif;
-    /* Teste */
     height: 100%;
 }
 
 
 body {
-    /* min-height: 100%;
-    
-    display: flex;
-    flex-direction: column; */
-
-    /* background-image: url(https://skylab.rocketseat.com.br/static/media/MountainsOpacity.a4edba24.png); */
-    /* background-repeat: no-repeat;
-    background-size: cover; */
-    /* background-color: rgb(20, 12, 37); */
-    /* font-family: 'Roboto', sans-serif; */
-    /* color: white; */
-    /* text-align: center; */
- 
     height: 100vh;
     display: flex;
     flex-direction: column;
-
 }
 
 .content-container {
@@ -109,6 +94,10 @@ a:hover {
     gap: 20px;
 }
 
+.food {
+    cursor: pointer;
+}
+
 .recipes img {
     width: 300px;
     height: 140px;
@@ -141,7 +130,7 @@ a:hover {
 
 .footer {
     background: #EEEEEE;
-    margin-top: 4.5%;
+    margin-top: 50px;
     width: 1903px;
     height: 62px;
 
@@ -216,7 +205,6 @@ a:hover {
     margin-top: 25px;
 }
 
-
 /*==== MODAL ==== */
 
 .modal-overlay {
@@ -251,62 +239,103 @@ a:hover {
     text-decoration: none;
 }
 
-/*==== MODAL.ACTIVE & MODAL.MAXIMIZE ==== */
+/* ==== Not Found ==== */
 
-.modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
+.not-found {
+    align-items: center;
+    text-align: center;
+    padding: 20px;
 }
 
-.modal.maximize {
-    width: 660px;
-    height: 413px;
 
+/* ==== RECIPE DETAIL ==== */
+
+.recipe-detail {
+    margin: 0 290px;
 }
 
-.modal-content img {
-    margin: 30px 30px 20px 30px;
-    opacity: 100%;
+.recipe-header {
+    align-items: center;
+    text-align: center;
+    /* position: fixed; */
+}
+
+.image-recipe img{
+    margin-top: 25px;
     border-radius: 15px;
-    width: 600px;
-    height: 200px;
+
+    opacity: 100%;
 }
 
-.modal-content .descricao-receita {
-    opacity: 100%;
+.content-recipe {
+    margin-top: 50px;
     font-weight: bold;
+    opacity: 100%;
+    color: #111111;
+    font-size: 36px;
+    line-height: 42px;
+}
+
+.recipe-author {
+    font-size: 20px;
+    color: #777777;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.recipe-context {
+    margin: 0 auto;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.recipe-context h4 {
+    margin-top: 50px;
+    margin-left: 15px;
     line-height: 28px;
+    opacity: 100%;
     font-size: 24px;
     color: #111111;
-    text-align: center;
-    padding-bottom: 5px;
+    /* padding-bottom: 1.8%; */
 }
 
-.modal-content .criador-receita {
+.recipe-ingredients ul,
+.recipe-preparation ul {
+    margin-top: 20px;
+    margin-left: 35px;
+}
+
+.recipe-information p {
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: justify;
+}
+
+.show-ingredients,
+.show-preparation,
+.show-information {
+    display: flex;
+    justify-items: center;
+}
+
+.show-ingredients button,
+.show-preparation button,
+.show-information button {
+    font-size: 10px;
+    color: #999999;
+
+    line-height: 14px;
+
+    width: 0px;
+
     opacity: 100%;
-    line-height: 21px;
-    font-size: 18px;
-    color: #777777;
-    text-align: center;
-    padding-bottom: 60px;
-}
 
-
-/* Verificação de hover para Receitas serem abertas */
-
-.food {
+    margin-left: 8px;
+    margin-top: 39px;
     cursor: pointer;
-}
-/* 
-.food:target {
-    animation: spin 3s linear infinite;
+
+    font-weight: bold;
+
 }
 
-@keyframes food {
-   0% {
-        transform: rotateY(0deg);
-   }
-   100% {
-        transform: rotateY(360deg);
-   }
-} */

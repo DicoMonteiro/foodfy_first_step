@@ -1,27 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="icon" href="../../public/asserts/favicon.ico" type="image/x-icon" />
+{% extends "layout.njk" %}
 
-    <link rel="stylesheet" href="../../public/styles.css">
-    <link rel="stylesheet" href="../../public/responsive.css">
-
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block head %}
     <title>História da Foodfy</title>
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <a href="home.html"><img src="../../public/asserts/logo.png" alt="Foodfy"></a>
-        </div>
-        <div class="links-header">
-            <a href="about.html" class="sobre">Sobre</a>
-            <a href="recipes.html">Receitas</a>
-        </div>
-    </header>
-    
+{% endblock %}
+
+ {% block header %}
+    <a href="about.html" class="sobre">Sobre</a>
+    <a href="/recipes">Receitas</a>
+{% endblock %}
+            
+{% block content %}
     <div class="content-container">
         <section class="about">
         
@@ -86,11 +74,4 @@
         
         </section>
     </div>
-
-
-    <footer class="footer">
-        <p>Todos direitos reservados, receitas Foodfy.</p>
-    </footer>
-
-</body>
-</html>
+{% endblock %}

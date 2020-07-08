@@ -1,6 +1,6 @@
 /* Responsive */
 /* Inserir regras para ao atingir um determinado ponto, ele tratar para a responsividade */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     header {
         margin: 0 370px;
 
@@ -19,6 +19,16 @@
 
     .about {
         margin: 0 370px;
+    }
+
+    .recipe-detail {
+        margin: 0 370px;
+    }
+
+    .show-ingredients button,
+    .show-preparation button,
+    .show-information button {
+        margin-top: 60px;
     }
 }
 
@@ -49,9 +59,19 @@
     .modal {
         margin: 313px 660px 400px 660px;
     }
+
+    .recipe-detail {
+        margin: 0 470px;
+    }
+
+    .show-ingredients button,
+    .show-preparation button,
+    .show-information button {
+        margin-top: 59px;
+    }
 }
 
-@media (max-height: 760px) {
+@media (max-height: 768px) {
     header {
         margin: 0 275px;
 
@@ -78,5 +98,15 @@
 
     .modal {
         margin: 200px 430px 200px 430px;
+    }
+
+    .recipe-detail {
+        margin: 0 280px;
+    }
+
+    .show-ingredients button,
+    .show-preparation button,
+    .show-information button {
+        margin-top: 62px;
     }
 }

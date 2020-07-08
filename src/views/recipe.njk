@@ -1,0 +1,77 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Receitas</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+{% endblock %}
+
+ {% block header %}
+    <a href="/about">Sobre</a>
+    <a href="/recipes" class="receitas">Receitas</a>
+{% endblock %}
+
+           
+{% block content %}
+ 
+    <div class="content-container">
+        <section class="recipe-detail">
+            <div class="recipe-header">
+                <div class="image-recipe">
+                    <img src="{{ item.image }}" alt="{{ item.title }}">
+                </div>
+                <div class="content-recipe">
+                    <p>{{ item.title }}</p>
+                </div>
+                <div class="recipe-author">
+                    <p>{{ item.author }}</p>
+                </div>
+            </div>
+
+            <div class="recipe-context">
+                <div class="recipe-ingredients">
+                    <div class="show-ingredients">
+                        <h4>Ingredientes</h4>
+                        <button id="ingredients-button" onClick="showHide('ingredients')">ESCONDER</button>
+                    </div>
+                    <div id="ingredients">
+                        <ul>
+                            {% for item in item.ingredients %}
+                                <li>{{ item }};</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="recipe-preparation">
+                    <div class="show-preparation">
+                        <h4>Modo de preparo</h4>
+                        <button id="preparation-button" onClick="showHide('preparation')">ESCONDER</button>
+                    </div>
+                    <div id="preparation">
+                        <ul>
+                            {% for item in item.preparation %}
+                                <li>{{ item }};</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="recipe-information">
+                    <div class="show-information">
+                        <h4>Informações adicionais</h4>
+                        <button id="information-button" onClick="showHide('information')">ESCONDER</button>
+                    </div>
+                    <div id="information">
+                        <p>{{ item.information }}</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>    
+
+    <script src="/scripts/scripts.js"></script>
+{% endblock %}
