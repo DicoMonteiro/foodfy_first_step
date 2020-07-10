@@ -250,15 +250,22 @@ a:hover {
 
 /* ==== RECIPE DETAIL ==== */
 
-.recipe-detail {
-    margin: 0 290px;
+.content-container {
+    /* position: fixed;  */
 }
 
 .recipe-header {
     align-items: center;
     text-align: center;
-    /* position: fixed; */
+    margin: auto;
+    /* position: relative; */
 }
+
+/* .recipe-detail {
+    margin: 0 auto;
+} */
+
+
 
 .image-recipe img{
     margin-top: 25px;

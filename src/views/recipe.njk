@@ -17,8 +17,7 @@
 {% block content %}
  
     <div class="content-container">
-        <section class="recipe-detail">
-            <div class="recipe-header">
+        <div class="recipe-header">
                 <div class="image-recipe">
                     <img src="{{ item.image }}" alt="{{ item.title }}">
                 </div>
@@ -28,8 +27,8 @@
                 <div class="recipe-author">
                     <p>{{ item.author }}</p>
                 </div>
-            </div>
-
+        </div>
+        <section class="recipe-detail">
             <div class="recipe-context">
                 <div class="recipe-ingredients">
                     <div class="show-ingredients">

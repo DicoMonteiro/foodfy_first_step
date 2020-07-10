@@ -4,7 +4,7 @@
 </h1>
 
 <h2 align="center">
-  <a href="https://github.com/DicoMonteiro/foodfy/src/views">HTML</a> + <a href="https://github.com/DicoMonteiro/foodfy/public">CSS</a> + <a href="https://github.com/DicoMonteiro/foodfy/public/scripts">Javascript</a>
+  <a href="https://github.com/DicoMonteiro/foodfy/src/views">HTML</a> + <a href="https://github.com/DicoMonteiro/foodfy/public">CSS</a> + <a href="https://github.com/DicoMonteiro/foodfy/public/scripts">Javascript</a> + <a href="https://github.com/DicoMonteiro/foodfy">NodeJS</a>
 </h2>
 
 <h4 align="center">
@@ -31,9 +31,15 @@
 -  [CSS](https://www.w3schools.com/css/)
 -  [VS Code][vc]
   
+#### Back-end
+
+-  [NodeJS](https://nodejs.org/en/)
+-  [Express](https://expressjs.com/)
+-  [Nunjucks](https://www.npmjs.com/package/nunjucks)
+
 ## :information_source: How To Use
 
-To clone and run this application, you'll need [Git](https://git-scm.com) and installed extensions (HTML, Javascript, CSS) on your IDE. From your command line:
+To clone and run this application, you'll need [Git](https://git-scm.com) and installed extensions (HTML, Javascript, CSS) on your IDE and installed NodeJS. From your command line:
 
 ```bash
 # Clone this repository
@@ -49,7 +55,8 @@ $ cd public
 $ cd public/scripts
 
 # Run the projects
-execute opened the files HTML in your browser
+npm install
+npm start
 
 ```
 
