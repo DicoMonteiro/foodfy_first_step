@@ -8,10 +8,10 @@
 
 {% endblock %}
 
- {% block header %}
+ {# {% block header %}
     <a href="/about">Sobre</a>
-    <a href="/recipes" class="receitas">Receitas</a>
-{% endblock %}
+    <a href="/recipes">Receitas</a>
+{% endblock %} #}
 
            
 {% block content %}
@@ -25,7 +25,7 @@
                     <p>{{ item.title }}</p>
                 </div>
                 <div class="recipe-author">
-                    <p>{{ item.author }}</p>
+                    <p>por {{ item.author }}</p>
                 </div>
         </div>
         <section class="recipe-detail">
@@ -33,9 +33,10 @@
                 <div class="recipe-ingredients">
                     <div class="show-ingredients">
                         <h4>Ingredientes</h4>
-                        <button id="ingredients-button" onClick="showHide('ingredients')">ESCONDER</button>
+                        {# <button id="ingredients-button" onClick="showHide('ingredients')">MOSTRAR</button> #}
+                        <button id="ingredients-button" class="button">MOSTRAR</button>
                     </div>
-                    <div id="ingredients">
+                    <div id="ingredients" class="details__recipe hide">
                         <ul>
                             {% for item in item.ingredients %}
                                 <li>{{ item }};</li>
@@ -47,9 +48,10 @@
                 <div class="recipe-preparation">
                     <div class="show-preparation">
                         <h4>Modo de preparo</h4>
-                        <button id="preparation-button" onClick="showHide('preparation')">ESCONDER</button>
+                        {# <button id="preparation-button" onClick="showHide('preparation')">MOSTRAR</button> #}
+                        <button id="preparation-button" class="button">MOSTRAR</button>
                     </div>
-                    <div id="preparation">
+                    <div id="preparation" class="details__recipe hide">
                         <ul>
                             {% for item in item.preparation %}
                                 <li>{{ item }};</li>
@@ -61,9 +63,10 @@
                 <div class="recipe-information">
                     <div class="show-information">
                         <h4>Informações adicionais</h4>
-                        <button id="information-button" onClick="showHide('information')">ESCONDER</button>
+                        {# <button id="information-button" onClick="showHide('information')">MOSTRAR</button> #}
+                        <button id="information-button" class="button">MOSTRAR</button>
                     </div>
-                    <div id="information">
+                    <div id="information" class="details__recipe hide">
                         <p>{{ item.information }}</p>
                     </div>
                 </div>
@@ -72,5 +75,5 @@
         </section>
     </div>    
 
-    <script src="/scripts/scripts.js"></script>
+    <script src="/scripts/script_hide.js"></script>
 {% endblock %}

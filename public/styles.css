@@ -3,9 +3,10 @@
 
 /* ==== Home ==== */
 :root {
-    --color-banner:  #FBDFDB;
+    --color-banner: #FBDFDB;
     --color-header: #111111;
     --color-rocket: #7159c1;
+    --color-black: #111111;
 }
 
 * {
@@ -32,7 +33,7 @@ body {
     flex: 1 0 auto;
 }
 
-header {
+.header_home {
     margin: 0 231px;
 
     display: flex;
@@ -42,6 +43,8 @@ header {
 }
 
 header .logo {
+
+    /* padding-top: 8px; */
 
     padding-right: 122.4px;
 
@@ -72,6 +75,23 @@ a:hover {
     font-weight: bold;
     transition: color 200ms;
 }
+
+/* .content{
+    max-width: 58.75rem;
+    margin: 0 auto;
+}
+  
+  
+.content-flex {
+    height: 91vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} */
+
+/* .banner {
+    background-color: var(--color-banner);
+} */
 
 
 .must-accessed h3 {
@@ -132,7 +152,8 @@ a:hover {
 
 .footer {
     background: #EEEEEE;
-    margin-top: 50px;
+    /* margin-top: 50px; */
+    margin-top: auto;
     width: 1903px;
     height: 62px;
 
@@ -158,9 +179,10 @@ a:hover {
 
 /* ==== About ==== */
 
-.sobre {
+/* .sobre, 
+.active{
     font-weight: bold;
-}
+} */
 
 .about {
     margin: 0 290px;
@@ -199,9 +221,10 @@ a:hover {
 
 /* ==== Recipes ==== */
 
-.receitas {
+/* .receitas,
+.active {
     font-weight: bold;
-}
+} */
 
 .recipes.foods {
     margin-top: 25px;
@@ -252,9 +275,9 @@ a:hover {
 
 /* ==== RECIPE DETAIL ==== */
 
-.content-container {
-    /* position: fixed;  */
-}
+/* .content-container {
+    position: fixed; 
+}  */
 
 .recipe-header {
     align-items: center;
@@ -267,7 +290,9 @@ a:hover {
     margin: 0 auto;
 } */
 
-
+.hide {
+    display: none;
+}
 
 .image-recipe img{
     margin-top: 25px;
@@ -319,6 +344,7 @@ a:hover {
     margin-left: 15px;
     margin-right: 15px;
     text-align: justify;
+    color: #111111;
 }
 
 .show-ingredients,
@@ -348,3 +374,368 @@ a:hover {
 
 }
 
+.links-header a.active {
+    font-weight: bold;
+    /* color: var(--primary-color);  */
+ }
+
+/* ====== ADMIN ====== */
+
+.header_admin {
+    background-color: var(--color-black);
+    width: 100%;
+    /* height: 80px; */
+    display: flex;
+
+    padding: 1.688rem 0;
+    box-sizing: border-box;
+
+    align-items: center;
+
+    /* margin-bottom: 50px; */
+}
+
+header .logo_admin {
+    /* padding-left: 231px; */
+    /* margin: 0 470px; */
+    margin: 0 auto;
+    width: 100%;
+    max-width: 58.75rem;
+
+    /* justify-self: center; */
+    /* align-self: center; */
+
+    /* width: 90.6px; */
+    /* height: 26.9px; */
+    /* opacity: 100%; */
+
+    /* color: #FFFFFF; */
+ }
+
+.admin-container {
+    /* margin-top: 100px; */
+    margin: 0 500px;
+ }
+
+ .admin-management {
+    margin-top: 50px;
+    display: flex;
+    justify-content: left;
+    text-align: unset;
+ }
+
+.admin-management h1 {
+    line-height: 1.75rem;
+    font-size: 1.5rem;
+    color: var(--color-black);
+ }
+
+.admin-management a {
+     margin: 0 280px;
+     background-color: var(--color-header);
+     padding: 8px 8px;
+     text-decoration: none;
+     text-transform: uppercase;
+     color: white;
+     font-size: 12px;
+     border-radius: 4px;
+ }
+
+.recipes-management {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    max-width: 58.75rem;
+    margin-top: 1.875rem;
+}
+
+.recipe-management {
+    display: grid;
+    grid-template-columns: 38% 62%;
+    gap: 1.25rem;
+    position: relative;
+}
+
+.recipe-management::before {
+    content: " ";
+    width: 0%;
+    height: 0.15rem;
+    background-color: var(--color-banner);
+    left: 0;
+    top: -0.6rem;
+    position: absolute;
+}
+
+.recipe-management::after {
+    content: " ";
+    width: 0%;
+    height: 0.15rem;
+    background-color: var(--color-banner);
+    left: 0;
+    top: 5.4rem;
+    position: absolute;
+}
+
+.recipe-management:hover::before{
+    width: 100%;
+    transition: width 1.5s ease-in-out;
+}
+
+.recipe-management:hover::after{
+    width: 100%;
+    transition: width 1.5s ease-in-out;
+}
+
+.recipe-management img{
+    /* border-radius: 0.536rem;
+    height: 5rem;
+    width: 10.75rem; */
+    /* margin-left: 75px; */
+    width: 172px;
+    height: 80px;
+    border-radius: 15px;
+    display: block;
+    margin: 0px auto;
+    max-width: 100%;
+    object-fit: cover;
+
+}
+
+.recipe-management h4{
+    font-size: 1.125rem;
+    line-height: 1.313rem;
+    color: var(--color-black);
+    font-weight: normal;
+}
+
+.recipe-management p{
+    font-size: 0.875rem;
+    color: grey;
+    line-height: 1rem;
+    margin-top: 0.313rem;
+    margin-bottom: 0.626rem;
+}
+
+.recipe-management a{
+    text-decoration: none;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    color: var(--color-rocket);
+    font-weight: bold;
+}
+
+/* .admin-details {
+    display: flex;
+    line-height: 90px;
+} */
+
+/* .details {
+    margin-top: 50px;
+    margin: 0 483px;
+} */
+
+/* ====== ADMIN - CREATE / EDIT ====== */
+
+.card {
+    max-width: 58.75rem;
+    /* margin: 3.438rem auto; */
+    padding: 0 0.5rem;
+    margin: 3.438rem 500px;
+}
+
+.details-create,
+.details-show {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: 50px;
+    margin: 0 500px;
+    line-height: 90px;
+    display: flex;
+    margin-bottom: 30px; */
+}
+
+.details-create h1 {
+    /* font-size: 24px;
+    width: 165px; */
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    color: var(--color-black);
+}
+
+.details-create button,
+.editButton {
+    font-size: 1rem;
+    line-height: 1.188rem;
+    padding: 0.563rem 1.25rem;
+    font-weight: bold;
+    /* margin-left: 650px; */
+    background-color: #6558C3;
+    /* width: 100px; */
+    /* height: 40px; */
+    /* text-decoration: none; */
+    border-radius: 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.details-create button:hover,
+.editButton:hover {
+    transition: 1s;
+    background-color: purple;
+}
+
+ /* .details-create button span{
+    text-decoration: none;
+    width: 99px;
+    height: 19px;
+    color: #FFFFFF;
+    text-align: right;
+    font-size: 12px;
+ } */
+
+.editButton {
+    text-decoration: none;
+}
+
+
+/* ====== ADMIN - FIELDS / INPUTS ====== */
+
+.item {
+    margin-top: 1.875rem;
+}
+
+.item span:first-child{
+    /* font-size: 16px; */
+    font-size: 1rem;
+    color: var(--color-black);
+    font-weight: bold;
+    line-height: 1.188rem;
+    /* margin-bottom: 10px; */
+}
+
+.item span + div {
+    margin-top: 0.625rem;
+}
+
+.item input, 
+.item textarea{
+    background: #FFFFFF;
+    border: 0.063rem solid #DDDDDD;
+    border-radius: 4px;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    width: 900px;
+    height: 49px;
+    margin: 0 4px;
+}
+
+.item textarea {
+    /* height: 257px; */
+    min-height: 16.063rem;
+    resize: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+}
+::-webkit-input-placeholder {
+    color: purple;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+/* Botões de Add Ingredientes e Modo de Preparo */
+
+.add-ingredient,
+.add-preparation {
+    font-size: 16px;
+    color: #6558C3;
+    text-align: right;
+    margin-bottom: 30px;
+    text-decoration: none;
+    font-weight: bold;
+ }
+
+
+/* ====== ADMIN - SHOW ====== */
+
+.card-show { 
+    max-width: 58.75rem;
+    margin: 3.438rem auto;
+    padding: 0 0.5rem;
+}
+
+.image img {
+    width: 100%;
+    max-height: 17.5rem;
+    border-radius: 0.938rem;
+    margin-top: 1.25rem;
+    object-fit: cover;
+    margin-bottom: 3.125rem;
+}
+
+.title {
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 2.25rem;
+    color: var(--color-black);
+    line-height: 2.625rem;
+}
+
+.title p {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: #444444;
+}
+
+#itemShow + #itemShow {
+    margin-top: 2.563rem;
+}
+
+.item {
+    margin-top: 1.875rem;
+}
+
+.item h2 {
+    font-size: 1.5rem;
+    color: var(--color-black);
+    line-height: 1.75rem;
+    margin-bottom: 1.188rem;
+}
+
+.item ul,
+p {
+    color: #999999;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.item ul li {
+    list-style-type: none;
+}
+
+.item ul li::before {
+    content: '-  ';
+}
+
+
+/* ====== ADMIN - EDIT / DELETE ====== */
+
+.form-actions{
+    position: relative;
+}
+
+.save, .delete{
+    position: absolute;
+    top: 0;
+}
+
+.save{
+    right: 0;
+}
+
+.details-create .delete{
+    right: 9.313rem;
+    background-color: #DC4747;
+}

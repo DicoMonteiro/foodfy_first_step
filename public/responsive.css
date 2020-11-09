@@ -1,7 +1,7 @@
 /* Responsive */
 /* Inserir regras para ao atingir um determinado ponto, ele tratar para a responsividade */
 @media (max-width: 1024px) {
-    header {
+    .header_home {
         margin: 0 370px;
 
         margin-top: 36px;
@@ -33,7 +33,7 @@
 }
 
 @media (min-width: 1700px) {
-    header {
+    .header_home {
         margin: 0 470px;
         margin-top: 36px;
         margin-bottom: 30px;
@@ -48,9 +48,9 @@
         margin: 0 485px 0 485px;
     }
 
-    .footer {
+    /* .footer {
         width: 1903px;
-    }
+    } */
 
     .about {
         margin: 0 470px;
@@ -69,18 +69,23 @@
     .show-information button {
         margin-top: 59px;
     }
+/* 
+    .header_admin {
+        width: 3500px;
+        height: 120px;
+    } */
 }
 
 @media (max-height: 768px) {
-    header {
+    .header_home {
         margin: 0 275px;
 
         margin-top: 36px;
         margin-bottom: 30px;
     }
 
-    .must-accessed h3 {
-        margin: 0 292px;
+    .header_home .must-accessed h3 {
+        margin-left: 400px;
         margin-bottom: 20px;
     }
 
@@ -88,12 +93,12 @@
         margin: 0 292px 0 292px;
     }
 
-    .footer {
+    /* .footer {
         width: 1519px;
-    }
+    } */
 
     .about {
-        margin: 0 275px;
+        margin: 0 150px;
     }
 
     .modal {
@@ -109,4 +114,36 @@
     .show-information button {
         margin-top: 62px;
     }
+
+    .header_admin {
+        margin: 0 275px;
+
+        margin-top: 36px;
+        margin-bottom: 30px;
+    }
+
+    .admin-container {
+        /* margin-top: 100px; */
+        margin: 0 350px;
+     }
+}
+
+@media (max-width: 58.438rem){
+
+    .header_home{
+      justify-content: center;
+    }
+  
+    /* .content{
+      padding:0 0.5rem;
+    } */
+}
+  
+  
+@media (max-width: 39.375rem){
+  
+    .header_home{
+      justify-content: center;
+    }
+    
 }

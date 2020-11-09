@@ -1,0 +1,50 @@
+{% extends "../layout_admin.njk" %}
+
+{% block title %}
+    <title>{{recipe.title}}</title>
+{% endblock %}
+
+{% block content %}
+
+<main class="card-show">
+    <section class="details">
+        <div class="details-show">
+            <h1>{{ itens.subtitle[0] }} {{ recipe.title }}</h1>
+            <a href="/admin/recipes/{{ recipe.id }}/edit" class="editButton">{{ itens.editBtn }}</a>
+        </div>
+
+        <div class="image">
+            <img src="{{ recipe.image }}" alt="Imagem do {{ recipe.title }}">
+        </div>
+
+        <div class="title">
+            <h1>{{ recipe.title }}</h1>
+            <p>por {{ recipe.author }}</p>
+        </div>
+
+        <div class="item" id="itemShow">
+            <h2>{{ itens.subtitle[1] }}</h2>
+            <ul>
+                {% for item in recipe.ingredients %}
+                   <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="item" id="itemShow">
+            <h2>{{ itens.subtitle[2] }}</h2>
+            <ul>
+                {% for item in recipe.preparation %}
+                   <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="item" id="itemShow">
+            <h2>{{ itens.subtitle[3] }}</h2>
+            <p>{{ recipe.information }}</p>
+        </div>
+    </section>
+</main>
+
+{% endblock content %}

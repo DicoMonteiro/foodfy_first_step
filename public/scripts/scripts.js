@@ -9,33 +9,6 @@ for (let i = 0; i < recipes.length; i++) {
 }
 
 
-// Funções de exibir ou esconder as informações da receita
-function showHide(id) {
-    var display = document.getElementById(id).style.display;
-    var element = ''
-    if (id == "ingredients"){
-        element = document.getElementById("ingredients-button");
-    }
-    else if (id == "preparation") {
-        element = document.getElementById("preparation-button");
-    }
-    else {
-        element = document.getElementById("information-button");
-    }
-    
-    
-    if(display == "none") {
-        document.getElementById(id).style.display = 'block';
-        element.innerHTML="ESCONDER";
-        // console.log('mostrou...')
-    } else {
-        document.getElementById(id).style.display = 'none';
-        // console.log('escondeu...')
-        element.innerHTML="MOSTRAR";
-    }
-
-}
-
 //  Backup para analise e estudo posteriormente
 // Solução usando o id, gerado no HTML pelo indexOf:
 // for (let recipe of recipes) {

@@ -1,0 +1,29 @@
+{% extends "../layout_admin.njk" %}
+
+
+{% block content %}
+
+<div class="admin-container">
+    <div class="admin-management">
+        <h1>Gerenciar receitas</h1>
+        <a href="/admin/recipes/create">Novo</a>
+    </div>
+
+    <section class="recipes-management">
+        {% for recipe in recipes %}
+            <div class="recipe-management">
+                <img src="{{ recipe.image }}" alt="Imagem da receita {{ recipe.title }}">
+                <div class="info__recipe">
+                    <h4>{{ recipe.title }}</h4>
+                    <p>por {{ recipe.author }}</p>
+                    {# Solução usando para pegar o index, porém não consegui ajustar quando editar ou excluir para pegar pelo index também #}
+                    <a href="/admin/recipes/{{ recipes.indexOf(recipe) }}">Visualizar</a>
+                    {# <a href="/admin/recipes/{{ recipe.id }}">Visualizar</a> #}
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+</div>
+
+{% endblock content %}
+
