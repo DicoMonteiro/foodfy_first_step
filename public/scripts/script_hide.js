@@ -1,3 +1,4 @@
+// Solução mais enxuta:
 const buttons = document.querySelectorAll('.button')
 const infos = document.querySelectorAll('.details__recipe')
 

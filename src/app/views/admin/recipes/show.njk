@@ -17,12 +17,12 @@
             <img src="{{ recipe.image }}" alt="Imagem do {{ recipe.title }}">
         </div>
 
-        <div class="title">
+        <div class="titleADM">
             <h1>{{ recipe.title }}</h1>
-            <p>por {{ recipe.author }}</p>
+            <p>por {{ recipe.chef_name }}</p>
         </div>
 
-        <div class="item" id="itemShow">
+        <div class="itemADM" id="itemShow">
             <h2>{{ itens.subtitle[1] }}</h2>
             <ul>
                 {% for item in recipe.ingredients %}
@@ -31,7 +31,7 @@
             </ul>
         </div>
 
-        <div class="item" id="itemShow">
+        <div class="itemADM" id="itemShow">
             <h2>{{ itens.subtitle[2] }}</h2>
             <ul>
                 {% for item in recipe.preparation %}
@@ -40,7 +40,7 @@
             </ul>
         </div>
 
-        <div class="item" id="itemShow">
+        <div class="itemADM" id="itemShow">
             <h2>{{ itens.subtitle[3] }}</h2>
             <p>{{ recipe.information }}</p>
         </div>

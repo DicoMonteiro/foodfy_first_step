@@ -1,0 +1,57 @@
+{% extends "../layout_admin.njk" %}
+
+{% block title %}
+    <title>{{chef.name}}</title>
+{% endblock %}
+
+{% block content %}
+
+<main class="card-show">
+    <section class="details">
+        <div class="details-show">
+            <h1>{{ itens.subtitle[0] }} {{ chefs.name }}</h1>
+            <a href="/admin/chefs/{{ chefs.chef_id }}/edit" class="editButton">{{ itens.editBtn }}</a>
+        </div>
+
+        <div class="image">
+            <span style="background-image: url({{ chefs.avatar_url }}); margin-right: 8px"></span>
+            {# <img src="{{ chef.avatar_url }}" alt="Imagem do {{ chef.name }}"> #}
+        </div>
+
+        <div class="titleADM">
+            <h1>{{ chefs.name }}</h1>
+            {# Calculo de quantidade de alunos e fazer a quantidade de receitas #}
+            {# <p>{{ chef.total_recipes }} {{ itens.subtitle[1] }}</p> #}
+        </div>
+
+        <div class="total_recipes">
+            {# <h1>{{ chef.name }}</h1> #}
+            {# Calculo de quantidade de alunos e fazer a quantidade de receitas #}
+            <p>{{ chefs.total_recipes }} {{ itens.subtitle[1] }}</p>
+        </div>
+
+
+        <div class="recipes__chef">
+            <h1>Receitas</h1>
+        </div>
+
+        {# <div class="content-container">
+            <section class="recipes-management">
+            {% for chef in chefs %}
+                <div class="recipe-management">
+                    <img src="{{ chef.image }}" alt="Imagem da receita {{ chef.title }}">
+                    <div class="info__recipe">
+                        <h4>{{ chef.title }}</h4>
+                        <p>por {{ chef.name }}</p> #}
+                        {# Solução usando para pegar o index, porém não consegui ajustar quando editar ou excluir para pegar pelo index também #}
+                        {# <a href="/admin/recipes/{{ recipes.indexOf(recipe) }}">Visualizar</a> #}
+                        {# <a href="/admin/recipes/{{ chef.id_recipe }}">Visualizar</a>
+                    </div>
+                </div>
+            {% endfor %}
+            </section>
+        </div>    #}
+    </section>
+</main>
+
+{% endblock content %}

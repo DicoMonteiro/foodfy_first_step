@@ -11,7 +11,7 @@
     </div>
 </div>
 
-<div class="item">
+{# <div class="item">
     <span>Autor</span>
     <div>
         <input 
@@ -21,6 +21,20 @@
             value="{{ recipe.author }}"
             required
             >
+    </div>
+</div> #}
+
+<div class="item">
+    <span>Chef</span>
+    <div>
+        <select class="select-chef" name="chef">
+            <option>Selecione um chef</option>
+            {% for chef in chefsOptions %}
+                <option value="{{ chef.id }}" {% if recipe.chef_id == chef.id %}selected{% endif %}>
+                    {{ chef.name }}
+                </option>
+             {% endfor %}
+        </select>
     </div>
 </div>
 
@@ -64,6 +78,7 @@
     {% endif %}
 </div>
 <button type="button" class="add-ingredient">Adicionar novo ingrediente</button>
+{# <a href="" class="add-ingredient">Adicionar novo ingrediente</a> #}
 
 <div id="preparation" class="item">
     <span>Modo de preparo</span>

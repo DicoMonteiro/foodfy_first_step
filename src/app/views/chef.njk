@@ -1,0 +1,26 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Chefs</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+{% endblock %}
+ 
+{% block content %}
+ 
+    <div class="content-container">
+        <div class="chef-header">
+                <div class="image-chef">
+                    <img src="{{ item.avatar_url }}" alt="{{ item.name }}">
+                </div>
+                <div class="content-chef">
+                    <p>{{ item.name }}</p>
+                </div>
+                <div class="chef-author">
+                    <p>por {{ item.created_at }}</p>
+                </div>
+        </div>
+    </div>
+{% endblock %}

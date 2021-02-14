@@ -1,0 +1,31 @@
+{% extends "../layout_admin.njk" %}
+
+
+{% block content %}
+
+<div class="admin-container">
+    <div class="admin-management">
+        <h1>Gerenciar chefs</h1>
+        <a href="/admin/chefs/create">Novo</a>
+    </div>
+
+    <section class="chefs-management">
+        {% for chef in chefs %}
+        <div class="chef perfil">
+            <div class="chef-management">
+                {# <img src="{{ chef.avatar_url }}" alt="Imagem da receita {{ chef.name }}"> #}
+                <span style="background-image: url({{ chef.avatar_url }}); margin-right: 8px"></span>
+            </div>
+            <div class="chef-management__content">
+                <p>{{ chef.name }}</p>
+                {# Solução usando para pegar o index, porém não consegui ajustar quando editar ou excluir para pegar pelo index também #}
+                {# <a href="/admin/chefs/{{ chefs.indexOf(chef) }}">Visualizar</a> #}
+                <a href="/admin/chefs/{{ chef.id }}">Visualizar</a>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+</div>
+
+{% endblock content %}
+

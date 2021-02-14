@@ -15,10 +15,10 @@
                 <img src="{{ recipe.image }}" alt="Imagem da receita {{ recipe.title }}">
                 <div class="info__recipe">
                     <h4>{{ recipe.title }}</h4>
-                    <p>por {{ recipe.author }}</p>
+                    <p>por {{ recipe.chef_name }}</p>
                     {# Solução usando para pegar o index, porém não consegui ajustar quando editar ou excluir para pegar pelo index também #}
-                    <a href="/admin/recipes/{{ recipes.indexOf(recipe) }}">Visualizar</a>
-                    {# <a href="/admin/recipes/{{ recipe.id }}">Visualizar</a> #}
+                    {# <a href="/admin/recipes/{{ recipes.indexOf(recipe) }}">Visualizar</a> #}
+                    <a href="/admin/recipes/{{ recipe.id }}">Visualizar</a>
                 </div>
             </div>
         {% endfor %}

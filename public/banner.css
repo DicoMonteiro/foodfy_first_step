@@ -7,7 +7,9 @@
     background-color: #FBDFDB;
     border-radius: 30px;
 
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin: 0 485px;
+    margin-top: 18px;
     margin-bottom: 50px;
     
     display: grid;

@@ -1,0 +1,56 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Chefs</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+{% endblock %}
+           
+{% block content %}
+ 
+    <div class="content-container">
+        <section class="chefs perfis">
+           {% for chef in chefs %}
+            {# <div class="chef perfil" id="{{ chefs.indexOf(chef) }}"> #}
+            <div class="chef perfil" id="{{ chef.id }}">
+                <div class="chef__image-container">
+                    {# <img src="{{ chef.avatar_url }}" alt="{{ chef.name }}"> #}
+                    <span style="background-image: url({{ chef.avatar_url }}); margin-right: 8px"></span>
+                    {# <p>{{ chef.name }}</p> #}
+                    {# <p>{{ chef.total_recipes }} {{ itens.subtitle[1] }}</p> #}
+                </div>
+                <div class="chef__content">
+                    <p>{{ chef.name }}</p>
+                    <span>{{ chef.total_recipes }} {{ itens.subtitle[1] }}</span>
+                </div>
+                {# <div class="chef__info">
+                    <p>{{ chef.total_recipes }} {{ itens.subtitle[1] }}</p>
+                </div> #}
+            </div>
+          {% endfor %}
+
+          {# {% for item in items %}
+            <div class="chef perfil" id="{{ items.indexOf(item) }}">
+                <div class="chef__image-container">
+                    <img src="{{ item.avatar_url }}" alt="{{ item.name }}">
+                </div>
+                <div class="chef__content">
+                    <p>{{ item.name }}</p>
+                </div>
+                <div class="chef__info">
+                    <p>{{ item.created_at }}</p>
+                </div>
+            </div>
+          {% endfor %} #}
+        </section>
+    </div>
+    <div class="pagination"
+        data-page={{pagination.page}}
+        data-total={{pagination.total}}
+        data-filter={{filter}}
+    ></div>
+
+    <script src="/scripts/scripts.js"></script>
+{% endblock %}
