@@ -98,25 +98,26 @@ module.exports = {
         return res.render("admin/chefs/create")
     },
     show(req, res) {
-        chefs = []
-        recipes = []
-        Chef.find(req.params.id, function(chefs) {
-            if(!chefs) return res.send("Chef not found!")
-            // return res.render("admin/chefs/show", { chefs, itens })
-            console.log(chefs)
-            chefs = chefs
+        Chef.find(req.params.id, function(chef) {
+            if(!chef) return res.send("Chef not found!")
+            Chef.findRecipes(req.params.id, function(recipes) {
+                if(!recipes) return res.send("Recipes not found!")
+                return res.render("admin/chefs/show", { chef, itens, recipes })
+            })
         })
-        Chef.findRecipes(req.params.id, function(recipes) {
-            if(!recipes) return res.send("Recipes not found!")
-            console.log(recipes)
-            recipes = recipes
+        // Chef.findRecipes(req.params.id, function(recipes) {
+        //     if(!recipes) return res.send("Recipes not found!")
+            // console.log(recipes)
+            // recipes = recipes
+            // console.log(recipes)
             // return res.render("admin/chefs/show", { recipes })
-        })
+        // })
 
+        //  colocar "async show(req, res)"
         // results = await Chef.findRecipes(req.params.id)
         // const recipes = results.rows
         // console.log(recipes)
-        return res.render("admin/chefs/show", { chefs, itens, recipes })
+        // return res.render("admin/chefs/show", { chefs, itens, recipes })
     },
     post(req, res) {
         const keys = Object.keys(req.body)

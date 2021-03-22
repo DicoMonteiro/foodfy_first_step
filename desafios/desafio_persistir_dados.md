@@ -46,7 +46,7 @@ Você irá criar um busca de receitas, onde você poderá filtrar receitas pelo 
 
 [x] - Download dos arquivos: https://github.com/Rocketseat/bootcamp-launchbase-desafios-05/archive/master.zip
 
-[] - Acesse o arquivo layouts/admin/index.html para ver todas especificações do layout do site.
+[x] - Acesse o arquivo layouts/admin/index.html para ver todas especificações do layout do site.
 
 [x] - Importante: Ao deletar o chef, se o mesmo possuir pelo menos uma receita, retorne um erro informando que chefs que possuem receitas não podem ser deletados.
 
@@ -54,11 +54,11 @@ Você irá criar um busca de receitas, onde você poderá filtrar receitas pelo 
 
 [x] - Para facilitar a busca de uma receita cadastrada, a pessoa que acessar o site poderá filtrar por nome da receita.
 
-[] -Você criará também uma página de resultado da busca que listará as receitas de acordo com a busca do usuário.
+[x] -Você criará também uma página de resultado da busca que listará as receitas de acordo com a busca do usuário.
 
 [x] - Download dos arquivos: https://github.com/Rocketseat/bootcamp-launchbase-desafios-05/archive/master.zip
 
-[] - Acesse o arquivo layouts/site/index.html para ver todas especificações do layout do site.
+[x] - Acesse o arquivo layouts/site/index.html para ver todas especificações do layout do site.
 
 
 ## 👩‍🍳 [Site] Listagem de chefs
@@ -69,7 +69,7 @@ Você irá criar um busca de receitas, onde você poderá filtrar receitas pelo 
 
 [x] - Download dos arquivos: https://github.com/Rocketseat/bootcamp-launchbase-desafios-05/archive/master.zip
 
-[] - Acesse o arquivo layouts/site/index.html para ver todas especificações do layout do site.
+[x] - Acesse o arquivo layouts/site/index.html para ver todas especificações do layout do site.
 
 
 ##📆 Entrega

@@ -55,9 +55,7 @@ module.exports = {
         db.query(`
             SELECT recipes.*
             FROM recipes
-            LEFT JOIN chefs ON (chefs.id = recipes.chef_id)
-            WHERE chefs.id = $1
-            GROUP BY recipes.id`, [id], function(err, results) {
+            WHERE chef_id = $1`, [id], function(err, results) {
                 // if (err) return res.send("Database Error!!")
                 if (err) throw `Database Error!! ${err}`
                 callback(results.rows)

@@ -9,17 +9,17 @@
 <main class="card-show">
     <section class="details">
         <div class="details-show detail-chefs">
-            <h1>{{ itens.subtitle[0] }} {{ chefs.name }}</h1>
-            <a href="/admin/chefs/{{ chefs.chef_id }}/edit" class="editButton">{{ itens.editBtn }}</a>
+            <h1>{{ itens.subtitle[0] }} {{ chef.name }}</h1>
+            <a href="/admin/chefs/{{ chef.id }}/edit" class="editButton">{{ itens.editBtn }}</a>
         </div>
 
         <div class="image-chef">
-            <span style="background-image: url({{ chefs.avatar_url }}); margin-right: 8px"></span>
+            <span style="background-image: url({{ chef.avatar_url }}); margin-right: 8px"></span>
             {# <img src="{{ chef.avatar_url }}" alt="Imagem do {{ chef.name }}"> #}
         </div>
 
         <div class="name-chef">
-            <h1>{{ chefs.name }}</h1>
+            <h1>{{ chef.name }}</h1>
             {# Calculo de quantidade de alunos e fazer a quantidade de receitas #}
             {# <p>{{ chef.total_recipes }} {{ itens.subtitle[1] }}</p> #}
         </div>
@@ -27,7 +27,7 @@
         <div class="total_recipes-chef">
             {# <h1>{{ chef.name }}</h1> #}
             {# Calculo de quantidade de alunos e fazer a quantidade de receitas #}
-            <p>{{ chefs.total_recipes }} {{ itens.subtitle[1] }}</p>
+            <p>{{ chef.total_recipes }} {{ itens.subtitle[1] }}</p>
         </div>
 
 
@@ -42,7 +42,7 @@
                     <img src="{{ recipe.image }}" alt="Imagem da receita {{ chef.title }}">
                     <div class="info__recipe">
                         <h4>{{ recipe.title }}</h4>
-                        <p>por {{ chefs.name }}</p> #}
+                        <p>por {{ chef.name }}</p>
                         {# Solução usando para pegar o index, porém não consegui ajustar quando editar ou excluir para pegar pelo index também #}
                         {# <a href="/admin/recipes/{{ recipes.indexOf(recipe) }}">Visualizar</a> #}
                         <a href="/admin/recipes/{{ recipe.id }}">Visualizar</a>

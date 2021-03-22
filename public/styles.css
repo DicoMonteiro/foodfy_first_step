@@ -1259,6 +1259,21 @@ a:hover {
     color: var(--color-header);
 }
 
+.filter-recipe {
+    font-family: Roboto-Bold;
+    font-size: 24px;
+    color: #111111;
+    width: 240px;
+    height: 28px;
+    margin: 0 490px;
+    margin-bottom: 20px;
+    /* width: 174px;
+    height: 28px;  */
+    /* font-size: 24px; */
+    line-height: 28px;
+    opacity: 100%;
+}
+
 
 /* #### SITE - CHEFS #### */
 
@@ -1420,4 +1435,9 @@ p {
     font-size: 20px;
     line-height: 1.5rem;
     color: #777777;
+}
+
+
+.recipes__chef {
+    margin-bottom: 30px;
 }

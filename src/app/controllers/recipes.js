@@ -91,6 +91,46 @@ module.exports = {
 
         Recipe.paginate(params)
     },
+    indexFilter(req,res) {
+        let { filter, page, limit } = req.query
+
+        // Essa estrutura a seguir substitui o if/else, controlando a quantidade de registro por pagina:
+        page = page || 1
+        limit = limit || 8
+        let offset = limit * (page - 1)
+
+        const params = {
+            filter,
+            page,
+            limit,
+            offset,
+            callback(recipes) {
+                if (!recipes) return res.send("Recipe not found!")
+                
+                let pagination = ""
+                
+                if (recipes.length == 0) {
+                    pagination = {
+                        total: 1,
+                        page
+                    }
+                } else {
+                    pagination =  {
+                        total: Math.ceil(recipes[0].total / limit),
+                        page
+                    }
+                }
+                // Recipe.findChef(req.params.id, function(chef) {
+                //     console.log(chef)
+                //     return res.render("admin/recipes/index", { recipes, pagination, filter, chef})
+                // })
+
+                return res.render("filter_recipes", { recipes, pagination, filter})
+            }
+        }
+
+        Recipe.paginate(params)
+    },
     create(req, res) {
         Recipe.chefsSelectOptions(function(options) {
             return res.render('admin/recipes/create', { chefsOptions: options })

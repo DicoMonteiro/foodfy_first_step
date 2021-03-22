@@ -27,7 +27,7 @@ routes.get("/recipes", recipes.indexSite)
 
 routes.get("/chefs", chefs.indexSite)
 
-routes.get("/filter_recipes", recipes.indexSite)
+routes.get("/filter_recipes", recipes.indexFilter)
 
 // routes.get("/recipe/:index", function(req, res) {
 //     const receitas = data.recipes

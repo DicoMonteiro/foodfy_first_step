@@ -15,12 +15,29 @@
 
            
 {% block content %}
- 
-    <div class="content-filter">
-        <div class="filter">
-            <h4>Buscando por</h4>
-            <p>"{{ filter }}"</p>
-        </div>
+
+    <div class="filter-recipe">
+        <h4>Buscando por "{{ filter }}"</h4>
+        {# <p>"{{ filter }}"</p> #}
+    </div>
+    <div class="content-container">
+        <section class="recipes foods">
+           {% for recipe in recipes %}
+            {# <div class="recipe food" id="{{ recipes.indexOf(recipe) }}"> #}
+            <div class="recipe food" id="{{ recipe.id }}">
+                <div class="recipe__image-container">
+                    <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
+                </div>
+                <div class="recipe__content">
+                    <p>{{ recipe.title }}</p>
+                </div>
+                <div class="recipe__info">
+                    <p>por {{ recipe.chef_name }}</p>
+                </div>
+            </div>
+          {% endfor %}
+        </section>
+    </div>    
     
         {# <section class="recipes foods">
            {% for recipe in recipes %}
@@ -37,7 +54,6 @@
             </div>
           {% endfor %}
         </section> #}
-    </div>
     {# <div class="pagination"
         data-page={{pagination.page}}
         data-total={{pagination.total}}
