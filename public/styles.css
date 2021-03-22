@@ -670,6 +670,14 @@ a:hover {
     margin-bottom: 30px; */
 }
 
+.details-show {
+    margin-bottom: 20px;
+}
+
+.detail-chefs h1{
+    margin-right: 600px;
+}
+
 /* .details-create {
     margin: ;
 } */
@@ -691,13 +699,17 @@ a:hover {
 
 .details-edit h1 {
     font-size: 24px;
-    width: 175px;
-    height: 28px;
+    width: 250px;
+    height: 10px;
     
     /* font-size: 1.5rem; */
     /* line: 28px; */
     color: var(--color-black);
     margin-bottom: 30px;
+}
+
+.details-edit button {
+    
 }
 
 .details-create .createButton,
@@ -820,6 +832,10 @@ button.add-preparation {
     margin: 3.438rem auto;
     padding: 0 0.5rem;
     margin-bottom: 70px;
+}
+
+.image img {
+    border-radius: 15px;
 }
 
 /* .image img {
@@ -949,6 +965,18 @@ a:hover {
     border-radius: 15px;
 
     opacity: 100%;
+}
+
+.image-chef span {
+    /* margin-top: 15px; */
+    padding: 100px 100px;
+    /* background-color: var(--secondary-color); */
+    border-radius: 100px;
+    color: #777;
+    margin-top: 35px;
+    /* margin-bottom: 20px; */
+    display: inline-block;
+    margin-left: 370px;
 }
 
 .content-chef {
@@ -1314,10 +1342,24 @@ a:hover {
 .titleADM {
     text-align: center;
     margin-bottom: 25px;
+    margin-top: 50px;
 }
 
 .card-show .titleADM {
     margin-bottom: 10px;
+}
+
+.card-show .name-chef {
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+.card-show .name-chef h1 {
+    font-size: 36px;
+    color: var(--color-black);
+    line-height: 2.625rem;
 }
 
 .titleADM h1 {
@@ -1366,4 +1408,16 @@ p {
     font-size: 1.25rem;
     line-height: 1.5rem;
     color: #444444;
+}
+
+.total_recipes-chef {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-left: 25px;
+}
+
+.total_recipes-chef p {
+    font-size: 20px;
+    line-height: 1.5rem;
+    color: #777777;
 }

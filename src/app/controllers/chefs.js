@@ -98,15 +98,25 @@ module.exports = {
         return res.render("admin/chefs/create")
     },
     show(req, res) {
+        chefs = []
+        recipes = []
         Chef.find(req.params.id, function(chefs) {
             if(!chefs) return res.send("Chef not found!")
-            return res.render("admin/chefs/show", { chefs, itens })
+            // return res.render("admin/chefs/show", { chefs, itens })
+            console.log(chefs)
+            chefs = chefs
         })
-        // Chef.findRecipes(req.params.id, function(chefs) {
-        //     if(!chefs) return res.send("Chef not found!")
-        //     console.log(chefs)
-        //     return res.render("admin/chefs/show", { chefs, itens })
-        // })
+        Chef.findRecipes(req.params.id, function(recipes) {
+            if(!recipes) return res.send("Recipes not found!")
+            console.log(recipes)
+            recipes = recipes
+            // return res.render("admin/chefs/show", { recipes })
+        })
+
+        // results = await Chef.findRecipes(req.params.id)
+        // const recipes = results.rows
+        // console.log(recipes)
+        return res.render("admin/chefs/show", { chefs, itens, recipes })
     },
     post(req, res) {
         const keys = Object.keys(req.body)
